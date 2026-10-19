@@ -1,10 +1,10 @@
 {
-  "bundleBytes": 563116,
+  "bundleBytes": 563168,
   "experienceId": 10526463655,
-  "minifiedBytes": 1353003,
+  "minifiedBytes": 1353246,
   "placeId": 116921506811323,
-  "sha256": "adfa520f9c90dbf3e2553d602421eca9aef1d8f846d8a01b66f50e1eb994c820",
-  "sourceBytes": 1415491,
-  "version": "0.1.0",
+  "sha256": "9fd823ec2e4792e25eea54d0c1756ebf2d1545318c8da52be21646d6eae28721",
+  "sourceBytes": 1415725,
+  "version": "0.1.1",
   "windUI": "d2c9bac5f96f997418d680d19cb759892542e492"
 }
