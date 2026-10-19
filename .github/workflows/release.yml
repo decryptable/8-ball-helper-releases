@@ -1,0 +1,31 @@
+name: Publish release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Verify assets
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          test "$RELEASE_TAG" = "v$(jq -r .version assets/build.json)"
+          cd assets
+          sha256sum --check SHA256SUMS
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$RELEASE_TAG" --verify-tag --title "8 Ball Helper $RELEASE_TAG" --notes-file assets/RELEASE.md assets/8-ball-helper.luau assets/loader-latest.luau assets/loader-version.luau assets/build.json assets/SHA256SUMS assets/WindUI.LICENSE
