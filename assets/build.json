@@ -1,12 +1,12 @@
 {
-  "bundleBytes": 563927,
+  "bundleBytes": 570136,
   "experienceId": 10526463655,
-  "minifiedBytes": 1352677,
-  "payloadSha256": "370ef9eece56eea1d4d3fcce43df43b6b499d1df9a686bb4a7168c1688cd536e",
+  "minifiedBytes": 1371115,
+  "payloadSha256": "eb7e05564652ebe8726c190b1f3693417d3e650babb3d149df03ef0dd0274ba7",
   "placeId": 116921506811323,
   "protection": "renamed functions and masked LZ4 blocks",
-  "sha256": "7fd05e5b2cd3a8b5a6e9b1f945f8028ecb731091b9e99a94ede06d2cda0cf525",
-  "sourceBytes": 1420254,
-  "version": "0.1.2",
+  "sha256": "145848eb2452def145893375a0dfc051ef36cb00975bf05f1044ccde695c8f82",
+  "sourceBytes": 1449289,
+  "version": "0.1.3",
   "windUI": "d2c9bac5f96f997418d680d19cb759892542e492"
 }
